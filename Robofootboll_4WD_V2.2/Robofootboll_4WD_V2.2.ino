@@ -39,7 +39,7 @@ QGPMaker_MotorShield AFMS = QGPMaker_MotorShield(); // Объект шины I2C
 // Объекты моторов (M3) или (M1) на шилде
 QGPMaker_DCMotor *DCMotor_4 = AFMS.getMotor(4); // Левая сторона
 QGPMaker_DCMotor *DCMotor_3 = AFMS.getMotor(3); // Левая сторона
-QGPMaker_DCMotor *DCMotor_2 = AFMS.getMotor(2); // Левая сторона
+QGPMaker_DCMotor *DCMotor_2 = AFMS.getMotor(2); // Правая сторона
 QGPMaker_DCMotor *DCMotor_1 = AFMS.getMotor(1); // Правая сторона
 
 void setup() {
