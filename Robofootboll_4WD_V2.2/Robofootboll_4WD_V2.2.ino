@@ -1,6 +1,12 @@
-#include <Adafruit_MS_PWMServoDriver.h>
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
+// Release for ps2x motor shield v5.2 & PS2X gamepad.
+// Левый джойстик - вперёд/назад. Правый джойстик - влево/вправо. Блок кнопок слева - медленный ход во все стороны
+// Для перезапуска связи контроллера с радиомодулем шилда нажать на кнопку START (ещё не готово)
+// Осталось настроить чувствительность правого джойстика.
+// Свободные пины шилда: D2, D3, D4, D5, D6, D7 + все аналоговые.
+// V 1.0
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 #include <PS2X_lib.h>
-#include <QGPMaker_Encoder.h>
 #include <QGPMaker_MotorShield.h>
 
 //////////// SETING ///////////////////////////////////////////////////////////
@@ -258,35 +264,7 @@ void vibroCrossPSB() {
     ps2x.read_gamepad(false, 0);
   }
 }
-// Тест моторов без джойстика
-/*
-// Вперёд
-  DCMotor_3->setSpeed(SPEED_PWM);
-  DCMotor_1->setSpeed(SPEED_PWM);
-  DCMotor_3->run(FORWARD);
-  DCMotor_1->run(FORWARD);
-  // Останов
-  delay(2000);
-  DCMotor_3->run(RELEASE);
-  DCMotor_1->run(RELEASE);
-  delay(2000);
-  // Назад
-  DCMotor_3->setSpeed(SPEED_PWM);
-  DCMotor_1->setSpeed(SPEED_PWM);
-  DCMotor_3->run(BACKWARD);
-  DCMotor_1->run(BACKWARD);
-  delay(2000);
-  // Останов
-  DCMotor_3->run(RELEASE);
-  DCMotor_1->run(RELEASE);
-  delay(2000);
-*/
-/*
-  if (ps2x.Button(PSB_START))        // Перезапускает связь с контроллером
-    Serial.println("Start is being held");
-  if (ps2x.Button(PSB_SELECT))
-    Serial.println("Select is being held");
-  */
+
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE
